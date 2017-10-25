@@ -12,7 +12,7 @@ source:
     - ctypes_fontconfig.diff
 
 build:
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record record.txt
   skip: true  # [osx]
 
@@ -44,6 +44,7 @@ test:
 about:
   home: http://vispy.org/
   license: BSD 3-Clause
+  license_file: LICENSE.txt
   summary: 'VisPy is a high-performance interactive 2D/3D data visualization library.'
 
 extra:
