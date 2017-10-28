@@ -15,7 +15,7 @@ Current build status
 ====================
 
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/vispy-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/vispy-feedstock)
-OSX: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/vispy-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/vispy-feedstock)
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/vispy-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/vispy-feedstock/branch/master)
 
 Current release info
