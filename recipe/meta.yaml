@@ -16,9 +16,6 @@ build:
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
-  host:
-    - pip
-
   build:
     - python
     - setuptools
@@ -26,6 +23,9 @@ requirements:
     - numpy 1.9.*  # [win and py35]
     - numpy 1.11.*  # [win and py36]
     - fontconfig  # [unix]
+
+  host:
+    - pip
 
   run:
     - python
