@@ -24,7 +24,7 @@ requirements:
     - fontconfig  # [unix]
   run:
     - python
-    - numpy
+    - {{ pin_compatible('numpy') }}
     - fontconfig  # [unix]
 
 test:
