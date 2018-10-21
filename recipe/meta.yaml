@@ -12,23 +12,19 @@ source:
     - ctypes_fontconfig.diff
 
 build:
-  number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 1000
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
-  build:
+  host:
+    - pip
     - python
     - setuptools
-    - numpy 1.8.*  # [not (win and (py35 or py36))]
-    - numpy 1.9.*  # [win and py35]
-    - numpy 1.11.*  # [win and py36]
+    - numpy
     - fontconfig  # [unix]
-
   run:
     - python
-    - numpy >=1.8  # [not (win and (py35 or py36))]
-    - numpy >=1.9  # [win and py35]
-    - numpy >=1.11  # [win and py36]
+    - {{ pin_compatible('numpy') }}
     - fontconfig  # [unix]
 
 test:
@@ -48,5 +44,5 @@ about:
 
 extra:
   recipe-maintainers:
-    - davidh-ssec
+    - djhoese
     - kmuehlbauer
