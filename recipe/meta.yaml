@@ -22,17 +22,19 @@ requirements:
     - setuptools
     - numpy
     - fontconfig  # [unix]
+    - cython
   run:
     - python
     - {{ pin_compatible('numpy') }}
     - fontconfig  # [unix]
+    - freetype-py
 
 test:
   imports:
     - vispy
   # todo: check headless testing
   #requires:
-  #  - pyqt 4.*
+  #  - pyqt 5.*
   #commands:
   #  - python -c "import vispy; print(vispy.sys_info()); vispy.test()"
 
