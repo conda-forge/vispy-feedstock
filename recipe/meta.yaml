@@ -1,4 +1,4 @@
-{% set version = "0.5.3" %}
+{% set version = "0.6.0" %}
 
 package:
   name: vispy
@@ -7,32 +7,36 @@ package:
 source:
   fn: vispy-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/v/vispy/vispy-{{ version }}.tar.gz
-  sha256: f6c36408df851b91322c928aadb2c8aaf3b31150e11f723784cc81b6280fdcc0
+  sha256: e5a1199a84060b6c4b15d46cdf97dc679fe337a61ccc7db35e0644cc11ee753d
   patches:
     - ctypes_fontconfig.diff
 
 build:
-  number: 1000
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
+  build:
+    - {{ compiler('c') }}
   host:
     - pip
     - python
     - setuptools
     - numpy
     - fontconfig  # [unix]
+    - cython
   run:
     - python
     - {{ pin_compatible('numpy') }}
     - fontconfig  # [unix]
+    - freetype-py
 
 test:
   imports:
     - vispy
   # todo: check headless testing
   #requires:
-  #  - pyqt 4.*
+  #  - pyqt 5.*
   #commands:
   #  - python -c "import vispy; print(vispy.sys_info()); vispy.test()"
 
