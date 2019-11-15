@@ -36,11 +36,11 @@ requirements:
 test:
   imports:
     - vispy
-  # todo: check headless testing
-  #requires:
-  #  - pyqt 5.*
-  #commands:
-  #  - python -c "import vispy; print(vispy.sys_info()); vispy.test()"
+  # TODO: check headless testing
+  requires:
+   - pyqt >=5.0
+  commands:
+   - python -c "import vispy; print(vispy.sys_info()); vispy.test()"
 
 about:
   home: http://vispy.org/
