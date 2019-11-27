@@ -255,5 +255,6 @@ Feedstock Maintainers
 =====================
 
 * [@djhoese](https://github.com/djhoese/)
+* [@hadim](https://github.com/hadim/)
 * [@kmuehlbauer](https://github.com/kmuehlbauer/)
 
