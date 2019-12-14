@@ -32,8 +32,6 @@ requirements:
     - {{ pin_compatible('numpy') }}
     - fontconfig  # [unix]
     - freetype-py
-    # needed for pkg_resources
-    - setuptools
 
 test:
   imports:
