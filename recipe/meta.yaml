@@ -12,7 +12,7 @@ source:
     - ctypes_fontconfig.diff
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
@@ -53,4 +53,4 @@ extra:
   recipe-maintainers:
     - djhoese
     - kmuehlbauer
-    - hadim
+    - hmaarrfk
