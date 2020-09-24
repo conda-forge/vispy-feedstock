@@ -1,5 +1,5 @@
 {% set name = "vispy" %}
-{% set version = "0.6.4" %}
+{% set version = "0.6.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 627b6574b77c86e72a1e6b4522a5c9697c6f4cbb23678d8da9ff55c339264b1f
+  sha256: 90cc76e79ee16c839bca05753e0c5f9f1c1c57963f2d3b248e4afac0fd75df75
   patches:
     - ctypes_fontconfig.diff
 
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -47,7 +47,7 @@ about:
   license_family: BSD
   license: BSD 3-Clause
   license_file: LICENSE.txt
-  summary: 'VisPy is a high-performance interactive 2D/3D data visualization library.'
+  summary: VisPy is a high-performance interactive 2D/3D data visualization library.
 
 extra:
   recipe-maintainers:
