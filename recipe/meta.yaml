@@ -36,6 +36,8 @@ requirements:
     - {{ pin_compatible('numpy') }}
     - fontconfig  # [unix]
     - freetype-py
+    - hsluv
+    - kiwisolver
 
 test:
   imports:
