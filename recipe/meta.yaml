@@ -1,5 +1,5 @@
 {% set name = "vispy" %}
-{% set version = "0.6.6" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6f3c4d00be9e6761c046d520a86693d78a0925d47eeb2fc095e95dac776f74ee
+  sha256: e341083d6c993029baf463dd91c65bef43e257d4ded5c55866492f946ee5829e
   patches:
     - ctypes_fontconfig.diff
 
@@ -36,6 +36,8 @@ requirements:
     - {{ pin_compatible('numpy') }}
     - fontconfig  # [unix]
     - freetype-py
+    - hsluv
+    - kiwisolver
 
 test:
   imports:
