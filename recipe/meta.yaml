@@ -44,6 +44,7 @@ test:
     - vispy
     # make sure that platform-specific dpi functions can be imported
     - vispy.util.dpi
+    - vispy.util.fonts
   # TODO: check headless testing
   # requires:
   #  - pyqt >=5.0
