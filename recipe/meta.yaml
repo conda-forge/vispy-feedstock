@@ -12,7 +12,7 @@ source:
     - ctypes_fontconfig.diff
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -42,6 +42,9 @@ requirements:
 test:
   imports:
     - vispy
+    # make sure that platform-specific dpi functions can be imported
+    - vispy.util.dpi
+    - vispy.util.fonts
   # TODO: check headless testing
   # requires:
   #  - pyqt >=5.0
