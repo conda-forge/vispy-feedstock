@@ -1,5 +1,5 @@
 {% set name = "vispy" %}
-{% set version = "0.9.4" %}
+{% set version = "0.9.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8561e41bbcca5fadce4a8d974ca2f96cbe7710d835bfed6a55ed6d10900ef5d5
+  sha256: 8404287d7d7698e5392be34315abeaa99a351b263052751f25252913891fa930
   patches:
     - ctypes_fontconfig.diff
 
