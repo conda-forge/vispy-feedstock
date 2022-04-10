@@ -1,7 +1,11 @@
+BUILD:
+- aarch64-conda_cos7-linux-gnu
 c_compiler:
 - gcc
 c_compiler_version:
 - '10'
+cdt_arch:
+- aarch64
 cdt_name:
 - cos7
 channel_sources:
@@ -9,11 +13,11 @@ channel_sources:
 channel_targets:
 - conda-forge main
 docker_image:
-- quay.io/condaforge/linux-anvil-ppc64le
+- quay.io/condaforge/linux-anvil-aarch64
 fontconfig:
 - '2.13'
 numpy:
-- '1.21'
+- '1.19'
 pin_run_as_build:
   fontconfig:
     max_pin: x
@@ -21,9 +25,9 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 python:
-- 3.10.* *_cpython
+- 3.7.* *_cpython
 target_platform:
-- linux-ppc64le
+- linux-aarch64
 zip_keys:
 - - python
   - numpy
