@@ -15,12 +15,10 @@ channel_targets:
 docker_image:
 - quay.io/condaforge/linux-anvil-aarch64
 fontconfig:
-- '2.13'
+- '2'
 numpy:
 - '1.21'
 pin_run_as_build:
-  fontconfig:
-    max_pin: x
   python:
     min_pin: x.x
     max_pin: x.x
