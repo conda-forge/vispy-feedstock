@@ -31,6 +31,7 @@ requirements:
     - numpy
     - fontconfig  # [unix]
     - cython
+    - packaging
   run:
     - python
     - {{ pin_compatible('numpy') }}
@@ -38,6 +39,7 @@ requirements:
     - freetype-py
     - hsluv
     - kiwisolver
+    - packaging
 
 test:
   imports:
@@ -57,6 +59,7 @@ about:
   license: BSD-3-Clause
   license_file: LICENSE.txt
   summary: VisPy is a high-performance interactive 2D/3D data visualization library.
+  dev_url: https://github.com/vispy/vispy
 
 extra:
   recipe-maintainers:
