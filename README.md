@@ -9,6 +9,8 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/vispy-feedstock
 
 Summary: VisPy is a high-performance interactive 2D/3D data visualization library.
 
+Development: https://github.com/vispy/vispy
+
 Current build status
 ====================
 
