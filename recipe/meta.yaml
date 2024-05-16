@@ -12,7 +12,7 @@ source:
     - ctypes_fontconfig.diff
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -22,6 +22,7 @@ requirements:
     - cython                                 # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - pip
     - python
@@ -34,7 +35,6 @@ requirements:
     - packaging
   run:
     - python
-    - {{ pin_compatible('numpy') }}
     - fontconfig  # [unix]
     - freetype-py
     - hsluv
