@@ -367,10 +367,8 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@brisvag](https://github.com/brisvag/)
 * [@djhoese](https://github.com/djhoese/)
 * [@hmaarrfk](https://github.com/hmaarrfk/)
 * [@kmuehlbauer](https://github.com/kmuehlbauer/)
-
-
-<!-- dummy commit to enable rerendering -->
 
