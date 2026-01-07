@@ -372,6 +372,3 @@ Feedstock Maintainers
 * [@hmaarrfk](https://github.com/hmaarrfk/)
 * [@kmuehlbauer](https://github.com/kmuehlbauer/)
 
-
-<!-- dummy commit to enable rerendering -->
-
