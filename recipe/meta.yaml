@@ -22,11 +22,6 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython                                 # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
-    - hatchling
-    - hatch-vcs
-    - hatch-cython
-    # setuptools is needed by hatch-cython
-    - setuptools
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
   host:
@@ -36,6 +31,11 @@ requirements:
     - fontconfig  # [unix]
     - cython
     - packaging
+    - hatchling
+    - hatch-vcs
+    - hatch-cython
+    # setuptools is needed by hatch-cython
+    - setuptools
   run:
     - python
     - fontconfig  # [unix]
