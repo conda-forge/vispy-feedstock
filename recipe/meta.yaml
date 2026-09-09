@@ -22,14 +22,16 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython                                 # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
+    - hatchling
+    - hatch-vcs
+    - hatch-cython
+    # setuptools is needed by hatch-cython
+    - setuptools
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
   host:
     - pip
     - python
-    - setuptools
-    - setuptools_scm
-    - setuptools_scm_git_archive
     - numpy
     - fontconfig  # [unix]
     - cython
