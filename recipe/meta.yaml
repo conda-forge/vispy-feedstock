@@ -1,13 +1,13 @@
 {% set name = "vispy" %}
-{% set version = "0.16.2" %}
+{% set version = "0.17.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 09451abe8781336fd6842207cd95ce5e8609d99f13bcde898412538125c35088
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 20c2b51c3fc6f2700a648ede8560376dabdc5d258184cef8f6a34b3b4c80e46f
   patches:
     - ctypes_fontconfig.diff
 
@@ -27,13 +27,15 @@ requirements:
   host:
     - pip
     - python
-    - setuptools
-    - setuptools_scm
-    - setuptools_scm_git_archive
     - numpy
     - fontconfig  # [unix]
     - cython
     - packaging
+    - hatchling
+    - hatch-vcs
+    - hatch-cython
+    # setuptools is needed by hatch-cython
+    - setuptools
   run:
     - python
     - fontconfig  # [unix]
